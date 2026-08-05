@@ -332,7 +332,7 @@ class OverlayMenuWidgetState extends State<OverlayMenuWidget>
     final measuredBottomMenuSize = _measuredBottomMenuSize ?? Size.zero;
 
     final scrollPhysics = requiresScrolling
-        ? null
+        ? const BouncingScrollPhysics()
         : const NeverScrollableScrollPhysics();
 
     return Material(
